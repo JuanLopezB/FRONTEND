@@ -1,0 +1,47 @@
+
+<div class="card-listado">
+    <div class="card-body">
+        <h1>Lista de acudientes</h1>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Cod_Acudiente</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Género</th>
+                        <th scope="col">Fecha de nacimiento</th>
+                        <th scope="col">Parentesco</th>
+                        <th scope="col">Cedula</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+
+                    
+
+                </thead>
+                <tbody>
+                    <tr *ngFor="let acudiente of Acudientes; let icontrol=index">
+                        <td>{{acudiente.Cod_Acudiente}}</td>
+                        <td>{{acudiente.Nombre}}</td>
+                        <td>{{acudiente.Genero}}</td>
+                        <td>{{acudiente.Fecha_Nac}}</td>
+                        <td>{{acudiente.Parentesco}}</td>
+                        <td>{{acudiente.Cedula_Acudiente}}</td>
+                        <td>{{acudiente.Correo_Acudiente}}</td>
+                        <td>{{acudiente.Telefono}}</td>
+
+                        <!--Botones de editar y borrar-->
+                       <td> <a class="btn btn-primary" routerLink="/editar-acudiente/{{acudiente.Cod_Acudiente}}" > Editar </a>  
+                        <a class="btn btn-danger" (click)="borrarRegistro(acudiente.Cod_Acudiente,icontrol)" role="button">Borrar</a>
+                    
+                    </td> 
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+</div>

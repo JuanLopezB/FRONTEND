@@ -1,0 +1,229 @@
+.boton-personalizado {
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
+  border: 2px solid #8f8f8f;
+  border-radius: 10px; /* Esquinas redondeadas */
+  padding: 5px 10px; /* Espaciado interno */
+  color: #272727; /* Color del texto */
+  font-weight: bold;
+  text-transform: uppercase; /* Texto en mayúsculas */
+  transition: background-color 0.3s ease; /* Transición de color de fondo */
+  cursor: pointer;
+  background-color: rgba(240, 228, 228, 0.559);
+  display: flex;
+}
+
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-top: 250px; /* Ajusta el valor según el tamaño de tu header */
+  }
+  
+  .dashboard-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-item:hover {
+    background-color: #e0e0e0;
+  }
+  
+  nav {
+    background-color: white;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    height: 140px;
+    z-index: 600000;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.185);
+}
+
+nav:nth-child(2) {
+    visibility: hidden;
+}
+
+.enlace li,
+.enlace,
+section a {
+    text-decoration: none !important;
+    color: black;
+}
+
+.lista-menu,
+.lista-menu-desplegable {
+    list-style: none;
+    font-size: 20px;
+}
+
+.lista-menu li:hover {
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+    cursor: pointer;
+}
+
+#menu-seleccionado {
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+}
+
+.lista-menu-desplegable:hover {
+    color: black;
+}
+
+header section {
+    background-color: rgb(249, 249, 249);
+    position: fixed;
+    top: 0;
+    margin-top: 140px;
+    width: 100%;
+    z-index: 500000;
+}
+
+header section ul {
+    margin: 0px;
+}
+
+header section ul li {
+    color: gray;
+}
+
+header section ul li:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.menu-margen {
+    margin: 15px 0px;
+}
+
+.menu-seleccionado-desplegable {
+    color: black;
+}
+
+.menu {
+    background: black;
+    margin-right: 50px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+.menu:hover {
+    cursor: pointer;
+    background: linear-gradient(70deg, #8CB026, #066C34);
+}
+
+.agenda-digital {
+    font-family: 'Muli Bold' !important;
+    text-align: center;
+    padding: 10px;
+    border-radius: 35px !important;
+    width: 180px;
+    height: 50px;
+    background: linear-gradient(70deg, #8CB026, #066C34);
+    border: none;
+    color: #FFF;
+}
+
+.agenda-digital:hover {
+    filter: drop-shadow(0px 0px 2px green);
+}
+
+@media screen and (max-width: 1140px) {
+    nav:nth-child(2) {
+        visibility: visible;
+    }
+}
+
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lista-menu h1{
+  text-align: center;
+  font-family: 'Muli Bold';
+  letter-spacing: -3px;
+  color: #066C34;
+  margin: 15px 0;
+}
+
+/*parte de recuadros*/
+
+.cursos {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cuerpo-curso {
+  margin-top: 110px;
+  background-color: white;
+  position: relative;
+  box-shadow: 0px 3px 1px rgb(221, 221, 221);
+  width: calc(33.33% - 20px); /* Para tener un espacio entre los elementos */
+  height: 200px;
+  margin-bottom: 10px; /* Espacio entre las filas */
+}
+
+.cursos .cuerpo-curso h3 {
+  color: #009245;
+  margin: 20px 0px 0px 20px;
+  font-family: 'Muli Bold';
+  font-size: 25px;
+}
+
+.cursos .cuerpo-curso p {
+  color: #000000;
+  margin-left: 20px;
+  font-family: 'Muli';
+  font-size: 18px;
+  
+}
+
+.cursos .cuerpo-curso div {
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid rgb(221, 221, 221);
+  width: 100%;
+}
+
+.cursos .cuerpo-curso div img {
+  margin-left: 10px;
+}
+
+.cursos .cuerpo-curso div p {
+  color: #666666;
+  margin: 0px;
+  padding: 10px;
+}
+
+.s3 p {
+  font-family: 'Muli';
+  font-size: 20px;
+  color: #666666;
+  text-align: center;
+  margin-top: 40px;
+  letter-spacing: -1px;
+}
+
+
+.cursos .cuerpo-curso .agenda-digital{
+  display: block;
+  margin: 0 auto;
+}
+
+.cuerpo-curso button {
+  margin-left: auto; /* Centrar horizontalmente */
+  margin-right: auto; /* Centrar horizontalmente */
+}

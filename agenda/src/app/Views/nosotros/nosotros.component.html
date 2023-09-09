@@ -1,0 +1,147 @@
+<header *ngIf="router.url !== '/login'">
+    <nav class="navbar p-3 navbar-principal">
+      <div class="w-25" id="Logo">
+        <img class="ms-5" src="../assets/Logos/logo.png" width="250px" alt="" />
+      </div>
+      <div class="w-50" id="Menu">
+        <ul class="d-flex justify-content-evenly m-auto lista-menu">
+          <li class="enlace" routerLink="/inicio/">Inicio</li>
+          <li>
+            <a class="enlace" routerLink="/nosotros/">Nosotros</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="w-25 d-flex justify-content-center">
+        <button class="ms-5 agenda-digital" routerLink="/login/">
+          INICIAR SESION
+        </button>
+      </div>
+    </nav>
+  
+    <nav class="navbar navbar-desplegable">
+      <div class="w-25" id="Logo">
+        <img class="ms-5" src="../assets/Logos/logo.svg" width="250px" alt="" />
+      </div>
+  
+      <span
+        class="menu p-3 d-flex align-items-center"
+        id="desplegar"
+        (click)="toggleMenu()"
+      >
+        <img src="../assets/menu-logo.svg" alt="" />
+      </span>
+    </nav>
+  
+    <section class="menu-desplegable" *ngIf="showMenu">
+      <ul class="p-4 lista-menu-desplegable">
+        <li class="menu-margen">
+          <a routerLink="/inicio/">Inicio</a>
+        </li>
+        <li class="menu-margen">
+          <a routerLink="/nosotros/">Nosotros</a>
+        </li>
+        <li class="menu-margen">
+          <a routerLink="/login/">Iniciar sesión</a>
+        </li>
+      </ul>
+    </section>
+  </header>
+  
+
+
+
+
+<body>
+    <section class="s1 ">
+        <h1>¿Quiénes somos?</h1>
+        <p>El jardín infantil inquietudes trabaja junto a la institución del gobierno ICBF (Institución colombiana de bienestar familiar) se creó con la finalidad de brindar a la comunidad del sector de Pizarro y alrededores un espacio en el que los niños
+            pudieran compartir, aprender e interactuar con más compañeritos mientras los padres realizan sus deberes, también con la esperanza de fomentar la confiabilidad gracias a los valores impartidos a los pequeños tales como, el respeto, el compañerismo,
+            la honestidad y la responsabilidad, también despertar aquellas habilidades que pueden ir descubriendo poco a poco.</p>
+
+        <div class="contenedor d-flex ">
+            <div class="w-50 d-flex justify-content-center ">
+                <img src="../../../assets/Images/Jardin.png " width="550 " alt=" ">
+            </div>
+            <div class="w-50 d-flex flex-column justify-content-center align-items-center text-center ">
+                <h2>¿Dónde estamos ubicados?</h2>
+                <p class="text-center my-4 ">Dirección: Carrera 3 N 15 C – 51</p>
+                <p class="text-center my-4 ">Ciudad: Yumbo, Valle del Cauca</p>
+                <p class="text-center my-4 ">Teléfono: 6693192</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d351.96190378391253!2d-76.48787136167344!3d3.5888384218987124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30aa4f91d81337%3A0x7de03d09889c71e6!2sCra.%203%20Nte.%2C%20Arroyo%20Hondo%2C%20Yumbo%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1651180741194!5m2!1ses!2sco "
+                    width="80% " style="border:0; " allowfullscreen=" " loading="lazy " referrerpolicy="no-referrer-when-downgrade "></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="s2 ">
+        <div class="fondo ">
+            <h1>Cursos</h1>
+            <div class="cursos ">
+                <div class="cuerpo-curso ">
+                    <img src="../../../assets/Images/1.jpg " alt=" " width="100% ">
+                    <h3>Minis</h3>
+                    <p>Para niños de 2 a 3 años.</p>
+                    <div class="d-flex ">
+                        <img src="../../../assets/Logos/Icono-personas.svg " alt=" " width="20 ">
+                        <p>15 estudiantes</p>
+                    </div>
+                </div>
+                <div class="cuerpo-curso ">
+                    <img src="../../../assets/Images/2.jpg " alt=" " width="70% ">
+                    <h3>Pre-Jardín</h3>
+                    <p>Para niños de 3 a 4 años.</p>
+                    <div class="d-flex ">
+                        <img src="../../../assets/Logos/Icono-personas.svg " alt=" " width="20 ">
+                        <p>10 estudiantes</p>
+                    </div>
+                </div>
+                <div class="cuerpo-curso ">
+                    <img src="../../../assets/Images/3.jpg " alt=" " width="70% ">
+                    <h3>Jardín</h3>
+                    <p>Para niños de 4 a 6 años.</p>
+                    <div class="d-flex ">
+                        <img src="../../../assets/Logos/Icono-personas.svg " alt=" " width="20 ">
+                        <p>20 estudiantes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="s3 ">
+        <h1>Experiencias</h1>
+        <p>Opiniones de algunos padres de famiia que han hecho parte de la Institución y confiado en nuestra buena educación.</p>
+
+        <div class="experiencias ">
+            <div class="exp-cuerpo ">
+                <img src="../../../assets/Images/Exp 1.png " alt=" ">
+                <div>
+                    <h3>Juan Camilo López</h3>
+                    <h4>Acudiente Minis</h4>
+                    <p>Las instalaciones están muy bien ambientadas para los niños, la calidad de los docentes y el trato hacia nuestros niños.</p>
+                </div>
+            </div>
+            <div class="exp-cuerpo ">
+                <img src="../../../assets/Images/Exp 2.png " alt=" ">
+                <div>
+                    <h3>Debbie Yurany Torres</h3>
+                    <h4>Acudiente Pre-Jardín</h4>
+                    <p>Los docentes son muy profesionales en lo que hacen, están muy pendientes de los niños.</p>
+                </div>
+            </div>
+            <div class="exp-cuerpo ">
+                <img src="../../../assets/Images/Exp 3.png " alt=" ">
+                <div>
+                    <h3>Maria José Torres</h3>
+                    <h4>Acudiente Jardín</h4>
+                    <p>Es un buen espacio de aprendizaje y son muy amables con nuestros niños.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script src="../../funciones/jquery-3.6.0.js "></script>
+<script src="../../funciones/bootstrap.min.js"></script>
+<script src="../../funciones/menu.js "></script>

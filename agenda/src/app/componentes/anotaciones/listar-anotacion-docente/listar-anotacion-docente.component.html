@@ -1,0 +1,52 @@
+
+<nav class="navbar p-3 navbar-principal">
+    <div class="w-25" id="Logo">
+      <img class="ms-5" src="../assets/Logos/logo.png" width="250px" alt="" />
+    </div>
+    <div class="w-50" id="Menu">
+      <ul class="d-flex justify-content-evenly m-auto lista-menu">
+        <h1>¡GESTIÓN DE ANOTACIONES!</h1>
+      </ul>
+  
+    </div>
+    <div class="w-25 d-flex justify-content-center">
+      <button class="ms-5 agenda-digital" routerLink="/tablero-docente/">
+        VOLVER
+      </button>
+    </div>
+  </nav>
+  
+
+<div class="card">
+    <div class="card-body">
+        <h1>Listado de Anotaciones</h1>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Cod_Anotacion</th>
+                        <th scope="col">Cod_Estudiante</th>
+                        <th scope="col">Asunto</th>
+                        <th scope="col">Fecha_Anotacion</th>
+                        <th scope="col">Observaciones</th>
+                        <th scope="col">Acciones</th>
+
+                        <th>
+                          <button class="btn btn-success" (click)="createPdf()">Generar PDF</button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let anotacion of Anotaciones; let icontrol=index">
+                        <td>{{anotacion.Cod_Anotacion}}</td>
+                        <td>{{anotacion.Cod_Estudiante}}</td>
+                        <td>{{anotacion.Asunto}}</td>
+                        <td>{{anotacion.Fecha_Anotacion}}</td>
+                        <td>{{anotacion.Observaciones}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

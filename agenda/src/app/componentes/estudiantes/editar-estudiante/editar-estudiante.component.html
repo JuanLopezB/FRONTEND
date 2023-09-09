@@ -1,0 +1,120 @@
+<nav class="navbar p-3 navbar-principal">
+    <div class="w-25" id="Logo">
+      <img class="ms-5" src="../assets/Logos/logo.png" width="250px" alt="" />
+    </div>
+    <div class="w-50" id="Menu">
+      <ul class="d-flex justify-content-evenly m-auto lista-menu">
+        <h1>¡GESTIÓN DE ESTUDIANTES!</h1>
+      </ul>
+      
+    </div>
+    <div class="w-25 d-flex justify-content-center">
+      <button class="ms-5 agenda-digital" routerLink="/tablero-administrador/">
+        VOLVER
+      </button>
+    </div>
+  </nav>
+  
+
+<div class="card">
+    <div class="card-header">
+        Editar Estudiante
+    </div>
+    <div class="card-body">
+        <form ngNativeValidate [formGroup]="formularioDeEstudiantes" (ngSubmit)="enviarDatos()">
+
+            <!-- CAMPO DEL CÓDIGO DE GRUPO DEL ESTUDIANTE -->
+
+            <div class="mb-3">
+                <label for="" class="form-label">Código de Grupo</label>
+                <input required type="text" class="form-control" formControlName="Cod_Grupo" id=""
+                    aria-describedby="helpId" placeholder="Escribe el Código de Grupo del Estudiante">
+            </div>
+
+            <!-- CAMPO DEL CÓDIGO DE ACUDIENTE DEL ESTUDIANTE -->
+
+            <div class="mb-3">
+                <label for="" class="form-label">Código de Acudiente</label>
+                <input required type="text" class="form-control" formControlName="Cod_Acudiente" id=""
+                    aria-describedby="helpId" placeholder="Escribe el Código de Acudiente del Estudiante">
+            </div>
+
+             <!-- CAMPO DEL NOMBRE DEL ESTUDIANTE -->
+
+             <div class="mb-3">
+                <label for="" class="form-label">Nombre</label>
+                <input required type="text" class="form-control" formControlName="Nombre" id=""
+                    aria-describedby="helpId" placeholder="Escribe el Nombre del Estudiante">
+            </div>
+
+            <!-- CAMPO DEL GENERO DEL ESTUDIANTE -->
+
+            <div class="mb-3">
+                <label for="" class="form-label">Genero</label>
+                <input required type="text" class="form-control" formControlName="Genero" id=""
+                    aria-describedby="helpId" placeholder="Escribe el Genero del Estudiante">
+            </div>
+
+            <!-- CAMPO DE LA FECHA DE INGRESO DEL ESTUDIANTE -->
+
+            <div class="mb-3">
+                <label for="" class="form-label">Fecha de ingreso</label>
+                <input required type="text" class="form-control" name="" formControlName="Fecha_Ingreso" id=""
+                    aria-describedby="helpId" placeholder="Escribe en formato 'AÑO-MES-DIA'">
+            </div>
+
+            <!-- CAMPO DE LA FECHA DE INGRESO DEL ESTUDIANTE -->
+
+            <div class="mb-3">
+                <label for="" class="form-label">Fecha de Nacimiento</label>
+                <input required type="text" class="form-control" name="" formControlName="Fecha_Nac" id=""
+                    aria-describedby="helpId" placeholder="Escribe en formato 'AÑO-MES-DIA'">
+            </div>
+
+            <!-- CAMPO DE LA EPS DEL ESTUDIANTE -->
+
+            <div class="mb-3">
+                <label for="" class="form-label">EPS</label>
+                <input required type="text" class="form-control" name="" formControlName="EPS" id=""
+                    aria-describedby="helpId" placeholder="Escribe la EPS del Estudiante">
+            </div>
+
+            <!-- CAMPO DEL ESTADO DEL ESTUDIANTE -->
+
+            <div class="mb-3">
+                <label for="" class="form-label">Estado</label>
+                <input required type="text" class="form-control" name="" formControlName="Estado" id=""
+                    aria-describedby="helpId" placeholder="Escribe el Estado del Estudiante">
+            </div>
+
+            <!-- CAMPO DE LA DIRECCION DE RESIDENCIA DEL ESTUDIANTE -->
+
+            <div class="mb-3">
+                <label for="" class="form-label">Dirección de residencia</label>
+                <input required type="text" class="form-control" name="" formControlName="Direccion_Residencia" id=""
+                    aria-describedby="helpId" placeholder="Escribe la Dirección de Residencia del Estudiante">
+            </div>
+
+            <!-- CAMPO DEL NOMBRE DE LA MADRE DEL ESTUDIANTE -->
+
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre de la madre</label>
+                <input required type="text" class="form-control" name="" formControlName="Nombre_Madre" id=""
+                    aria-describedby="helpId" placeholder="Escribe el Nombre de la Madre del Estudiante">
+            </div>
+
+            <!-- CAMPO DEL NOMBRE DEL PADRE DEL ESTUDIANTE -->
+
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre del padre</label>
+                <input required type="text" class="form-control" name="" formControlName="Nombre_Padre" id=""
+                    aria-describedby="helpId" placeholder="Escribe el Nombre del Padre del Estudiante">
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Button group name">
+                <button type="submit" class="btn btn-success">Modificar</button>
+                <button type="button" routerLink="/agregar-estudiante" class="btn btn-primary">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>

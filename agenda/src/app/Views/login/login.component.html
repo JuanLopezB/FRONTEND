@@ -1,0 +1,26 @@
+
+<body>
+    <section class="formulario">
+        <h1>Bienvenido al panel de administración</h1>
+        <p class="descripcion">Inicia sesión para empezar el recorrido por la agenda digital</p>
+        <div class="parte1">
+            <div >
+                <input type="radio" name="radio" id="admin" [(ngModel)]="opcionSeleccionada" value="admin" checked> Administrador</div>
+            <div>
+              <input type="radio" name="radio" id="docente" [(ngModel)]="opcionSeleccionada" value="docente"> Docente</div>
+            <div>
+                <input type="radio" name="radio" id="acudiente" [(ngModel)]="opcionSeleccionada" value="acudiente"> Acudiente</div>
+        </div>
+        <div class="parte2">
+            <input class="form-control" [(ngModel)]="user.userName" placeholder="Documento de identidad">
+            <input class="form-control" [(ngModel)]="user.pass" placeholder="Contraseña">
+        </div>
+        <div class="parte3 d-flex justify-content-end">
+        </div>
+        <div class="d-flex justify-content-between botones">
+            <button (click)="login()">Ingresar</button>
+            <button routerLink="/inicio">Volver</button>
+        </div>
+    </section>
+
+</body>

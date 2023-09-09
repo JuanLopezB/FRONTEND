@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+
+import { Component} from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { TitleService } from './servicio/title.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'agenda';
+
+  constructor(public router: Router) {
+  }
+
+
+  ngOnInit() {
+    this.router.navigate(['/inicio']);
+  }
+
+
 }
+  

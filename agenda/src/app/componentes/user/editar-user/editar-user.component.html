@@ -1,0 +1,51 @@
+<nav class="navbar p-3 navbar-principal">
+    <div class="w-25" id="Logo">
+      <img class="ms-5" src="../assets/Logos/logo.png" width="250px" alt="" />
+    </div>
+    <div class="w-50" id="Menu">
+      <ul class="d-flex justify-content-evenly m-auto lista-menu">
+        <h1>¡GESTIÓN DE USUARIOS!</h1>
+      </ul>
+      
+    </div>
+    <div class="w-25 d-flex justify-content-center">
+      <button class="ms-5 agenda-digital" routerLink="/tablero-administrador/">
+        VOLVER
+      </button>
+    </div>
+  </nav>
+  
+<div class="top">
+<form ngNativeValidate [formGroup]="formularioDeUsuarios" (ngSubmit)="enviarDatos()">
+
+    <!-- CAMPO DEL CÓDIGO DEL userName -->
+
+    <div class="mb-3"> 
+        <label for="" class="form-label">userName</label>
+        <input required type="text"
+            class="form-control" formControlName="userName" id="" aria-describedby="helpId" placeholder="Escribe el userName">
+    </div>
+
+    <!-- CAMPO DEL password -->
+
+    <div class="mb-3">
+        <label for="" class="form-label">Password</label>
+        <input required type="text"
+            class="form-control" formControlName="pass" id="" aria-describedby="helpId" placeholder="Escribe la contraseña">
+    </div>
+
+    <!-- CAMPO DEL rol -->
+
+    <div class="mb-3">
+        <label for="" class="form-label">Rol</label>
+        <input required type="text"
+            class="form-control" formControlName="roleId" id="" aria-describedby="helpId" placeholder="Escribe el rol del usuario">
+    </div>
+
+    <div class="btn-group" role="group" aria-label="Button group name">
+        <button type="submit" class="btn btn-success">Modificar</button>
+        <button type="button" routerLink="/agregar-user" class="btn btn-primary">Cancelar</button>
+    </div>
+
+</form>
+</div>

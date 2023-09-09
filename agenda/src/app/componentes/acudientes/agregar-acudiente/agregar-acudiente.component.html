@@ -1,0 +1,142 @@
+
+<nav class="navbar p-3 navbar-principal">
+  <div class="w-25" id="Logo">
+    <img class="ms-5" src="../assets/Logos/logo.png" width="250px" alt="" />
+  </div>
+  <div class="w-50" id="Menu">
+    <ul class="d-flex justify-content-evenly m-auto lista-menu">
+      <h1>¡GESTIÓN DE ACUDIENTES!</h1>
+    </ul>
+
+  </div>
+  <div class="w-25 d-flex justify-content-center">
+    <button class="ms-5 agenda-digital" routerLink="/tablero-administrador/">
+      VOLVER
+    </button>
+  </div>
+</nav>
+
+<div class="card">
+  <div class="card-header">
+    Agregar Acudiente
+  </div>
+
+  <button (click)="toggleFormulario()" class="btn btn-primary">Mostrar/Ocular Formulario para agregar un acudiente</button>
+
+  <div class="card-body">
+    <div *ngIf="mostrarFormulario">
+      <form ngNativeValidate [formGroup]="formularioDeAcudientes" (ngSubmit)="enviarDatos()" method="POST">
+        <!-- Código HTML del formulario -->
+
+<!--CAMPO DEL NOMBRE DEL ACUDIENTE-->
+  
+<div class="mb-3"> 
+  <label for="" class="form-label">Nombre</label>
+  <input required ="text"
+    class="form-control" formControlName="Nombre" id="" aria-describedby="helpId" placeholder="Escribe el Nombre del Acudiente">
+</div>
+
+<!--CAMPO DEL GENERO DEL ACUDIENTE-->
+
+<div class="mb-3">
+    <label for="" class="form-label">Genero</label>
+    <input required type="text"
+      class="form-control" formControlName="Genero" id="" aria-describedby="helpId" placeholder="Escribe el Genero del Acudiente">
+  </div>
+  
+<!--CAMPO DE LA FECHA DE NACIMIENTO DEL ACUDIENTE-->
+
+<div class="mb-3">
+    <label for="" class="form-label">Fecha de nacimiento</label>
+    <input required type="text"
+      class="form-control" name="" formControlName="Fecha_Nac" id="" aria-describedby="helpId" placeholder="Escribe en formato 'AÑO-MES-DIA'">
+  </div>
+
+<!--CAMPO DE PARENTESCO-->
+
+<div class="mb-3">
+    <label for="" class="form-label">Parentesco</label>
+    <input  requiredtype="text"
+      class="form-control" name="" formControlName="Parentesco" id="" aria-describedby="helpId" placeholder="Escribe el parentesco del acudiente">
+  </div>
+
+  <!--CAMPO DE LA CEDULA DEL ACUDIENTE-->
+
+  <div class="mb-3">
+    <label for="" class="form-label">Cedula del acudiente</label>
+    <input required type="text"
+      class="form-control" name="" formControlName="Cedula_Acudiente" id="" aria-describedby="helpId" placeholder="Escribe la cedula del acudiente">
+  </div>
+
+  <!--CAMPO DE LA CEDULA DEL ACUDIENTE-->
+
+  <div class="mb-3">
+    <label for="" class="form-label">Correo del acudiente</label>
+    <input required type="email"
+      class="form-control" name="" formControlName="Correo_Acudiente" id="" aria-describedby="helpId" placeholder="Escribe el correo del acudiente">
+  </div>
+
+    <!--CAMPO DEL TELEFONO DEL ACUDIENTE-->
+
+    <div class="mb-3">
+        <label for="" class="form-label">Telefono del acudiente</label>
+        <input  requiredtype="email"
+          class="form-control" name="" formControlName="Telefono" id="" aria-describedby="helpId" placeholder="Escribe el telefono del acudiente">
+      </div>
+
+      <div class="btn-group" role="group" aria-label="Button group name">
+        <button type="submit" class="btn btn-success">Agregar</button>
+        <button type="button" (click)="toggleFormulario()" class="btn btn-primary">Cancelar</button>
+      </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="card-listado">
+  <div class="card-body">
+      <h1>Lista de acudientes</h1>
+      <div class="table-responsive">
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th scope="col">Cod_Acudiente</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Género</th>
+                      <th scope="col">Fecha de nacimiento</th>
+                      <th scope="col">Parentesco</th>
+                      <th scope="col">Cedula</th>
+                      <th scope="col">Correo</th>
+                      <th scope="col">Telefono</th>
+                      <th scope="col">Acciones</th>
+                  </tr>
+
+                  
+
+              </thead>
+              <tbody>
+                  <tr *ngFor="let acudiente of Acudientes; let icontrol=index">
+                      <td>{{acudiente.Cod_Acudiente}}</td>
+                      <td>{{acudiente.Nombre}}</td>
+                      <td>{{acudiente.Genero}}</td>
+                      <td>{{acudiente.Fecha_Nac}}</td>
+                      <td>{{acudiente.Parentesco}}</td>
+                      <td>{{acudiente.Cedula_Acudiente}}</td>
+                      <td>{{acudiente.Correo_Acudiente}}</td>
+                      <td>{{acudiente.Telefono}}</td>
+
+                      <!--Botones de editar y borrar-->
+                     <td> <a class="btn btn-primary" routerLink="/editar-acudiente/{{acudiente.Cod_Acudiente}}" > Editar </a>  
+                      <a class="btn btn-danger" (click)="borrarRegistro(acudiente.Cod_Acudiente,icontrol)" role="button">Borrar</a>
+                  
+                  </td> 
+                  </tr>
+
+              </tbody>
+          </table>
+      </div>
+      
+  </div>
+
+</div>

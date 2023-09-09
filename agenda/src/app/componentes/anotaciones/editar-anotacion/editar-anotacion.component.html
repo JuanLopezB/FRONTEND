@@ -1,0 +1,59 @@
+
+<nav class="navbar p-3 navbar-principal">
+    <div class="w-25" id="Logo">
+      <img class="ms-5" src="../assets/Logos/logo.png" width="250px" alt="" />
+    </div>
+    <div class="w-50" id="Menu">
+      <ul class="d-flex justify-content-evenly m-auto lista-menu">
+        <h1>¡GESTIÓN DE ANOTACIONES!</h1>
+      </ul>
+  
+    </div>
+    <div class="w-25 d-flex justify-content-center">
+      <button class="ms-5 agenda-digital" routerLink="/tablero-administrador/">
+        VOLVER
+      </button>
+    </div>
+  </nav>
+  
+
+<div class="card">
+<form ngNativeValidate [formGroup]="formularioDeAnotaciones" (ngSubmit)="enviarDatos()" method="POST">
+
+    <!--CAMPO DEL CÓDIGO DE LA ANOTACION-->
+    
+    <div class="mb-3">
+        <label for="" class="form-label">Código del Estudiante</label>
+        <input required type="text" class="form-control" formControlName="Cod_Estudiante" id="" aria-describedby="helpId" placeholder="Escribe el Código del Estudiante">
+    </div>
+    
+    <!--CAMPO DEL Asunto-->
+    
+    <div class="mb-3">
+        <label for="" class="form-label">Asunto</label>
+        <input required type="text" class="form-control" formControlName="Asunto" id="" aria-describedby="helpId" placeholder="Escribe el Asunto de la anotacion">
+    </div>
+    
+    <!--CAMPO DE LA FECHA DE LA ANOTACION-->
+    
+    <div class="mb-3">
+        <label for="" class="form-label">Fecha de la Anotación</label>
+        <input required type="text" class="form-control" name="" formControlName="Fecha_Anotacion" id="" aria-describedby="helpId" placeholder="Escribe la fecha de la anotacion">
+    </div>
+    
+    <!--CAMPO DE LA OBSERVACION-->
+    
+    <div class="mb-3">
+        <label for="" class="form-label">Observaciones</label>
+        <input required type="text" class="form-control" name="" formControlName="Observaciones" id="" aria-describedby="helpId" placeholder="Escribe la fecha de la Observacion">
+    </div>
+    
+    <!-- Other input fields for capturing teacher details such as name, gender, date of birth, email, and ID number -->
+    
+    <div class="btn-group" role="group" aria-label="Button group name">
+        <button type="submit" class="btn btn-success">Agregar</button>
+        <button type="button" routerLink="/agregar-anotacion" class="btn btn-primary">Cancelar</button>
+    </div>
+    
+    </form>
+</div>

@@ -1,0 +1,264 @@
+nav {
+    background-color: white;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    height: 140px;
+    z-index: 600000;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.185);
+}
+
+nav:nth-child(2) {
+    visibility: hidden;
+}
+
+.enlace li,
+.enlace,
+section a {
+    text-decoration: none !important;
+    color: black;
+}
+
+.lista-menu,
+.lista-menu-desplegable {
+    list-style: none;
+    font-size: 20px;
+}
+
+.lista-menu li:hover {
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+    cursor: pointer;
+}
+
+#menu-seleccionado {
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+}
+
+.lista-menu-desplegable:hover {
+    color: black;
+}
+
+header section {
+    background-color: rgb(249, 249, 249);
+    position: fixed;
+    top: 0;
+    margin-top: 140px;
+    width: 100%;
+    z-index: 500000;
+}
+
+header section ul {
+    margin: 0px;
+}
+
+header section ul li {
+    color: gray;
+}
+
+header section ul li:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.menu-margen {
+    margin: 15px 0px;
+}
+
+.menu-seleccionado-desplegable {
+    color: black;
+}
+
+.menu {
+    background: black;
+    margin-right: 50px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+.menu:hover {
+    cursor: pointer;
+    background: linear-gradient(70deg, #8CB026, #066C34);
+}
+
+.agenda-digital {
+    font-family: 'Muli Bold' !important;
+    text-align: center;
+    padding: 10px;
+    border-radius: 35px !important;
+    width: 180px;
+    height: 50px;
+    background: linear-gradient(70deg, #8CB026, #066C34);
+    border: none;
+    color: #FFF;
+}
+
+.agenda-digital:hover {
+    filter: drop-shadow(0px 0px 2px green);
+}
+
+@media screen and (max-width: 1140px) {
+    nav:nth-child(2) {
+        visibility: visible;
+    }
+}
+
+
+html,
+body {
+    background-color: #F8F9FA !important;
+}
+
+.s1 {
+    margin: auto;
+    width: 1100px;
+    margin-top: 170px;
+    margin-bottom: 50px;
+}
+
+.s1 h1 {
+    text-align: center;
+    font-family: 'Muli Bold';
+    font-size: 2.5rem;
+    letter-spacing: -3px;
+}
+
+.s1 p {
+    font-family: 'Muli';
+    font-size: 20px;
+    color: #666666;
+    text-align: justify;
+    margin-top: 40px;
+    letter-spacing: -1px;
+}
+
+
+
+.agenda-digital:hover {
+    filter: drop-shadow(0px 0px 2px green);
+}
+.agenda-digital {
+    font-family: 'Muli Bold' !important;
+    text-align: center;
+    padding: 10px;
+    border-radius: 35px !important;
+    width: 180px;
+    height: 50px;
+    background: linear-gradient(70deg, #8CB026, #066C34);
+    border: none;
+    color: #FFF;
+}
+.formulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario div {
+    margin: 10px 0px !important;
+}
+
+.formulario input,
+.formulario textarea {
+    font-family: 'Muli';
+    border: 1px solid #6666664b;
+    width: 318px;
+    height: 50px;
+}
+
+#nombre {
+    margin-right: 20px;
+}
+
+#asunto,
+#email,
+#mensaje {
+    width: 660.383px;
+    margin-right: 0px;
+}
+
+#mensaje {
+    height: 120px;
+    padding-bottom: 70px;
+    margin-bottom: 20px;
+    resize: none;
+}
+
+#enviar {
+    width: 150px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1px;
+}
+
+@media screen and (max-width: 1140px) {
+    .s1 {
+        width: 88%;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .formulario div {
+        width: 100%;
+    }
+    .formulario div input {
+        display: block;
+    }
+    .formulario div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #nombre {
+        margin-bottom: 20px;
+        margin-right: 0px;
+    }
+    #nombre,
+    #apellido,
+    #asunto,
+    #email,
+    #mensaje {
+        margin-right: auto;
+        margin-left: auto;
+        width: 80%;
+    }
+    #enviar {
+        margin: auto;
+    }
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../../../assets/Fonts/Helvetica.ttf');
+}
+
+@font-face {
+    font-family: 'Helvetica Light';
+    src: url('../../../assets/Fonts/Helvetica_Light.ttf');
+}
+
+@font-face {
+    font-family: 'Helvetica Bold';
+    src: url('../../../assets/Fonts/Helvetica_Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Muli Bold';
+    src: url('../../../assets/Fonts/Muli_Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../../../assets/Fonts/Muli-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Muli Sub';
+    src: url('../../../assets/Fonts/Muli.ttf');
+}

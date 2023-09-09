@@ -1,0 +1,61 @@
+
+<nav class="navbar p-3 navbar-principal">
+    <div class="w-25" id="Logo">
+      <img class="ms-5" src="../assets/Logos/logo.png" width="250px" alt="" />
+    </div>
+    <div class="w-50" id="Menu">
+      <ul class="d-flex justify-content-evenly m-auto lista-menu">
+        <h1>¡GESTIÓN DE ESTUDIANTES!</h1>
+      </ul>
+
+    </div>
+    <div class="w-25 d-flex justify-content-center">
+      <button class="ms-5 agenda-digital" routerLink="/tablero-acudiente/">
+        VOLVER
+      </button>
+    </div>
+  </nav>
+
+<div class="card">
+    <div class="card-body">
+        <h1>Lista de estudiantes</h1>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Cod_Estudiante</th>
+                        <th scope="col">Cod_Grupo</th>
+                        <th scope="col">Cod_Acudiente</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Género</th>
+                        <th scope="col">Fecha_Ingreso</th>
+                        <th scope="col">Fecha_Nacimiento</th>
+                        <th scope="col">EPS</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Direccion_Residencia</th>
+                        <th scope="col">Nombre_Madre</th>
+                        <th scope="col">Nombre_Padre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let estudiante of Estudiantes; let icontrol=index">
+                        <td>{{estudiante.Cod_Estudiante}}</td>
+                        <td>{{estudiante.Cod_Grupo}}</td>
+                        <td>{{estudiante.Cod_Acudiente}}</td>
+                        <td>{{estudiante.Nombre}}</td>
+                        <td>{{estudiante.Genero}}</td>
+                        <td>{{estudiante.Fecha_Ingreso}}</td>
+                        <td>{{estudiante.Fecha_Nac}}</td>
+                        <td>{{estudiante.EPS}}</td>
+                        <td>{{estudiante.Estado}}</td>
+                        <td>{{estudiante.Direccion_Residencia}}</td>
+                        <td>{{estudiante.Nombre_Madre}}</td>
+                        <td>{{estudiante.Nombre_Padre}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

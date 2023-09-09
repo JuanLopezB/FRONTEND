@@ -1,0 +1,67 @@
+<nav class="navbar p-3 navbar-principal">
+    <div class="w-25" id="Logo">
+      <img class="ms-5" src="../assets/Logos/logo.png" width="250px" alt="" />
+    </div>
+    <div class="w-50" id="Menu">
+      <ul class="d-flex justify-content-evenly m-auto lista-menu">
+        <h1>¡GESTIÓN DE DOCENTES!</h1>
+      </ul>
+      
+    </div>
+    <div class="w-25 d-flex justify-content-center">
+      <button class="ms-5 agenda-digital" routerLink="/tablero-administrador/">
+        VOLVER
+      </button>
+    </div>
+  </nav>
+  
+
+<form ngNativeValidate [formGroup]="formularioDeDocentes" (ngSubmit)="enviarDatos()">
+
+    <!-- CAMPO DEL NOMBRE DEL DOCENTE -->
+
+    <div class="mb-3"> 
+        <label for="" class="form-label">Nombre</label>
+        <input required type="text"
+            class="form-control" formControlName="Nombre" id="" aria-describedby="helpId" placeholder="Escribe el Nombre del Docente">
+    </div>
+
+    <!-- CAMPO DEL GENERO DEL DOCENTE -->
+
+    <div class="mb-3">
+        <label for="" class="form-label">Género</label>
+        <input required type="text"
+            class="form-control" formControlName="Genero" id="" aria-describedby="helpId" placeholder="Escribe el Género del Docente">
+    </div>
+
+    <!-- CAMPO DE LA FECHA DE NACIMIENTO DEL DOCENTE -->
+
+    <div class="mb-3">
+        <label for="" class="form-label">Fecha de nacimiento</label>
+        <input required type="text"
+            class="form-control" name="" formControlName="Fecha_Nac" id="" aria-describedby="helpId" placeholder="Escribe en formato 'AÑO-MES-DIA'">
+    </div>
+
+    <!-- CAMPO DEL CORREO DEL DOCENTE -->
+
+    <div class="mb-3">
+        <label for="" class="form-label">Correo del Docente</label>
+        <input required type="email"
+            class="form-control" name="" formControlName="Correo_Docente" id="" aria-describedby="helpId" placeholder="Escribe el Correo del Docente">
+    </div>
+
+    <!-- CAMPO DE LA CEDULA DEL DOCENTE -->
+
+    <div class="mb-3">
+        <label for="" class="form-label">Cédula del Docente</label>
+        <input required type="text"
+            class="form-control" name="" formControlName="Cedula_Docente" id="" aria-describedby="helpId" placeholder="Escribe la Cédula del Docente">
+    </div>
+
+    <div class="btn-group" role="group" aria-label="Button group name">
+        <button type="submit" class="btn btn-success">Modificar</button>
+        <button type="button" routerLink="/agregar-docente" class="btn btn-primary">Cancelar</button>
+    </div>
+
+</form>
+

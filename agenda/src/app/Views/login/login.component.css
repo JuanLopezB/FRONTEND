@@ -1,0 +1,186 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(240, 244, 255, 1) 100%);
+}
+
+.formulario {
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgb(204, 204, 204);
+    background-color: #F9F9FF;
+    width: 600px;
+    height: 630px;
+    padding: 70px;
+    font-family: 'Muli';
+    letter-spacing: -1px;
+}
+
+.formulario h1 {
+    text-align: center;
+    font-family: 'Muli Bold';
+    letter-spacing: -3px;
+    color: #066C34;
+    margin: 15px 0;
+}
+
+.formulario p {
+    color: #5b6e3c;
+    text-align: justify;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.formulario .parte1 {
+    font-family: 'Muli';
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0px 40px;
+    margin: 10px 0;
+}
+
+.formulario .parte1 div {
+    position: relative;
+}
+
+.formulario .parte1 div:hover {
+    cursor: pointer;
+}
+
+.formulario .parte1 div span {
+    position: absolute;
+    margin: 5px 0 0 -3px;
+    top: 0;
+    bottom: 0;
+    background-color: #066C34;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+}
+
+.formulario .parte1 punto {
+    position: absolute;
+    margin: auto 4px auto auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    width: 12px;
+    height: 12px;
+    border-radius: 30px;
+}
+
+.formulario .parte2 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario .parte2 input {
+    font-family: 'Muli';
+    letter-spacing: -1px;
+    background: none;
+    border: 2px solid #066C34;
+    border-radius: 30px;
+    height: 50px;
+}
+
+.formulario .parte2 input:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+.formulario .parte3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.formulario .parte3 p {
+    font-size: 18px;
+}
+
+.recuerdame-check {
+    position: relative;
+}
+
+.recuerdame-check:hover,
+.cursor-pointer:hover {
+    cursor: pointer;
+}
+
+.formulario .parte3 div span {
+    position: absolute;
+    margin: 5px 0 0 0;
+    top: 0;
+    bottom: 0;
+    background-color: #066C34;
+    width: 20px;
+    height: 20px;
+}
+
+.formulario .parte3 cuadro {
+    position: absolute;
+    margin: auto 4px auto auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    width: 12px;
+    height: 12px;
+}
+
+.formulario button {
+    font-family: 'Muli Bold';
+    font-size: 20px;
+    line-height: 10px;
+    color: white;
+    background: linear-gradient(70deg, #8CB026, #066C34);
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 20px 0 0 0;
+    border-radius: 40px;
+    border: none;
+}
+
+.formulario button:nth-of-type(2) {
+    background: linear-gradient(70deg, #b02626, #6c0606);
+}
+
+.formulario button:nth-of-type(2):hover {
+    filter: drop-shadow(0px 0px 2px rgb(128, 0, 0));
+}
+
+.formulario button:hover {
+    filter: drop-shadow(0px 0px 2px green);
+}
+
+@media screen and (max-width: 600px) {
+    .formulario {
+        height: 660px;
+    }
+    .formulario h1 {
+        margin-top: 0;
+    }
+    .descripcion {
+        text-align: center !important;
+    }
+    .parte3 {
+        flex-direction: column;
+    }
+    .parte3 div {
+        margin-bottom: 10px;
+    }
+    .botones {
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center;
+    }
+}

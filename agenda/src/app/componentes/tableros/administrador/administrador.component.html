@@ -1,0 +1,83 @@
+
+
+<header *ngIf="router.url !== '/login'">
+  <nav class="navbar p-3 navbar-principal">
+    <div class="w-25" id="Logo">
+      <img class="ms-5" src="../assets/Logos/logo.png" width="250px" alt="" />
+    </div>
+    <div class="w-50" id="Menu">
+      <ul class="d-flex justify-content-evenly m-auto lista-menu">
+        <h1>¡Bienvenid@ al tablero del administrador!</h1>
+      </ul>
+
+    </div>
+    <div class="w-25 d-flex justify-content-center">
+      <button class="ms-5 agenda-digital" (click)="borrarToken()">
+        Cerrar sesión
+      </button>
+    </div>
+  </nav>
+
+  <div class="cursos">
+    <div class="cuerpo-curso " >
+
+      <h3>GESTIONAR ESTUDIANTES</h3>
+      <br>
+      <p>Aquí podrás agregar, editar o eliminar cualquier registro relacionado a los estudiantes</p>
+      <button class="boton-personalizado" routerLink="/agregar-estudiante/">
+        Gestionar ahora
+      </button>
+    </div>
+
+    <div class="cuerpo-curso ">
+
+      <h3>GESTIONAR ACUDIENTES</h3>
+      <br>
+      <p>Aquí podrás agregar, editar o eliminar cualquier registro relacionado a los acudientes</p>
+      <button class="boton-personalizado" routerLink="/agregar-acudiente/">
+        Gestionar ahora
+      </button>
+
+    </div>
+
+    <div class="cuerpo-curso ">
+
+      <h3>GESTIONAR DOCENTES</h3>
+      <br>
+      <p>Aquí podrás agregar, editar o eliminar cualquier registro relacionado a los docentes</p>
+      <button class="boton-personalizado" routerLink="/agregar-docente">
+        Gestionar ahora
+      </button>
+
+    </div>
+
+    <div class="cuerpo-curso ">
+
+      <h3>GESTIONAR GRUPOS</h3>
+      <br>
+      <p>Aquí podrás agregar, editar o eliminar cualquier registro relacionado a los grupos</p>
+      <button class="boton-personalizado" routerLink="/agregar-grupo/">
+        Gestionar ahora
+      </button>
+
+    </div>
+
+    <div class="cuerpo-curso ">
+
+      <h3>GESTIONAR USUARIOS</h3>
+      <br>
+      <p>Aquí podrás agregar, editar o eliminar cualquier registro relacionado a los usuarios</p>
+      <button class="boton-personalizado" routerLink="/agregar-user/">
+        Gestionar ahora
+      </button>
+
+    </div>
+
+    <div class="cuerpo-curso ">
+
+    </div>
+    
+  </div>
+
+
+  
