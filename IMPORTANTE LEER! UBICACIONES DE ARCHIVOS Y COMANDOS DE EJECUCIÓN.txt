@@ -1,0 +1,89 @@
+Herramientas necesarias: 
+
+- Visual Studio Code o cualquier editor de texto de preferencia
+- MYSQL WORKBENCH 8.0
+- Xampp 
+
+-----------------------------------------------------------------------------------------
+
+Pasos necesarios para iniciar el proyecto: 
+
+- Iniciar Xampp
+- Copiar los documentos de la carpeta llamada "API" dentro de la carpeta llamada htdocs, la cual regularmente se encuentra en la siguiente ruta: 
+
+C:\xampp\htdocs
+
+- Ejecutar xampp control panel y incializar los dos servicios llamados: "Apache" y "MYSQL"
+
+- Copiar la bd, se encuentra en la carpeta llamada BD, esta debe ser importada en MYSQL WORKBENCH 8.0 
+
+
+------------------------------------------------------------------------------------------
+
+
+COMANDOS DE EJECUCIÓN:
+
+Abrir dos terminales en visual studio code o en el cmd del equipo.
+
+Desplazarse por medio del comando "cd" a las carpetas de la siguiente manera:
+
+------------------------------------------------------------------------------------------
+
+EJECUTAR EL FRONTEND: 
+
+- cd (escribir la ubicación de la carpeta llamada "agenda")
+
+- una vez en la ubicación de "agenda" que corresponde al frontend de la plataforma web, ejecutar el comando para instalar las dependencias necesarias del aplicativo: 
+
+npm i 
+
+- Luego el comando que inicializará el servicio será:
+
+ng serve
+
+- una vez aparezca el mensaje de confirmación en consola, en el navegador escribir localhost:4200 para visualizar la plataforma.
+
+
+-------------------------------------------------------------------------------------------
+
+EJECUTAR EL BACKEND: 
+
+- cd (escribir la ubicación de la carpeta llamada "backend")
+
+- una vez en la ubicación de "backend" que corresponde al backend de la plataforma web, ejecutar el comando para instalar las dependencias necesarias del aplicativo: 
+
+npm i 
+
+- Luego el comando que inicializará el servicio será: 
+
+npm run start
+
+- una vez aparezca el mensaje de confirmación en consola, de "BD OK" quiere decir que ya se esta ejecutando el servidor backend
+
+-------------------------------------------------------------------------------------------
+
+UBICACIONES DE CREDENCIALES IMPORTANTES: 
+
+En la carpeta backend -> api, encontraremos la carpeta de connection, revisar los datos correctos y que coincidan con las credenciales de MYSQLY WORKBENCH.
+
+CREDENCIALES PARA EL LOGIN EN LA PLATAFORMA CON SUS RESPECTIVOS ROLES: 
+
+ADMINISTRADOR: 
+
+Usuario: 1006436048
+Contraseña: 123
+
+DOCENTE:
+
+Usuario: 1118283843
+Contraseña: 123
+
+ACUDIENTE:
+
+Usuario: 16457557
+Contraseña: 123
+
+
+TENER EN CUENTA QUE ESTOS DATOS SE PUEDEN VALIDAR EN LA CARPETA LLAMADA "BD", DADO QUE EN ESA UBICACIÓN SE ENCUENTRA EL ARCHIVO DE LA BASE DE DATOS.
+
+-----------------------------------------------------------------------------
