@@ -50,7 +50,7 @@ export class ListarAnotacionComponent {
     this.pdfDefinition = {
       content: [
         {
-          text: 'Jardin infantil inquietudes',
+          text: 'Jardín Infantil Inquietudes',
           alignment: 'right',
           style: 'subheader'
         },
@@ -61,7 +61,7 @@ export class ListarAnotacionComponent {
         },
 
         {
-          text: 'Se generó automáticamente el listado de las observaciones de los estudiantes del jardin infantil inquietudes, recuerda tener en cuenta que debes tener el código del estudiante presente para identificar la observación deseada. Si no sabes cuál es el código del estudiante, recuerda que en el apartado de "Consulta de estudiantes" podrás buscar la información del alumno.',
+          text: 'Se generó automáticamente el listado de las observaciones de los estudiantes del Jardín Infantil Inquietudes, recuerda tener en cuenta que debes tener el código del estudiante presente para identificar la observación deseada. Si no sabes cuál es el código del estudiante, recuerda que en el apartado de "Consulta de estudiantes" podrás buscar la información del alumno.',
           style: 'message'
         },
         {

@@ -47,22 +47,22 @@ export class DocenteComponent {
   borrarToken(){
 
     Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: 'Cerrar sesion',
+      text: "¿Esta seguro de cerrar la sesio actual?",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonText: 'Si, cerrar!'
     }).then((result) => {
       if (result.isConfirmed) {
 
-        this.router.navigate(['/inicio']);
         localStorage.removeItem('token');
-        
+        this.router.navigate(['/inicio']);
+
         Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
+          'Gracias por visitarnos',
+          'Hasta pronto...',
           'success'
         )
       }
